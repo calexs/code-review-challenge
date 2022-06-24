@@ -1,1 +1,33 @@
-// aqui será adicionado a resolução de um desafio qualquer
+/**
+ * @param {string} s
+ * @return {number}
+ */
+const lengthOfLongestSubstring = function (s) {
+  if (!s) {
+    return 0;
+  }
+  // Starting index of the window
+  let start = 0;
+  // Ending index of the window
+  let end = 0;
+  // Maximum length of the substring
+  let maxLength = 0;
+  // Set to store the unique characters
+  const uniqueCharacters = new Set();
+  // Loop for each character in the string
+  while (end < s.length) {
+    if (!uniqueCharacters.has(s[end])) {
+      uniqueCharacters.add(s[end]);
+      end++;
+      maxLength = Math.max(maxLength, uniqueCharacters.size);
+    } else {
+      uniqueCharacters.delete(s[start]);
+      start++;
+    }
+  }
+  return maxLength;
+};
+
+console.log(lengthOfLongestSubstring("abcabcbb"));
+
+// Return 3
