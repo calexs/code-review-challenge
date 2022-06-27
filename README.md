@@ -14,6 +14,8 @@ A cada semana será liberado uma nova pasta contendo um desafio no arquivo `CHAL
 Caso tenha alguma dúvida de como prosseguir durante a dinâmica, basta olhar em [GUIDELINES.md](GUIDELINES.md).
 
 ## Contribuintes
-<a href="https://github.com/calexs/code-review-challenge/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=calexs/code-review-challenge" />
-</a>
+<p align="center">
+  <a href="https://github.com/calexs/code-review-challenge/graphs/contributors">
+    <img src="https://contrib.rocks/image?repo=calexs/code-review-challenge" />
+  </a>
+</p>
