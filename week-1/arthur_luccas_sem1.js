@@ -1,6 +1,14 @@
-const result = !'()[][]{}(){}[]'
-	.replace(/\(\)/g, '')
-	.replace(/\[\]/g, '')
-	.replace(/\{\}/g, '')
+const checkPairs = (str) => {
+	const result = str
+		 .replaceAll('()', '')
+		 .replaceAll('[]', '')
+		 .replaceAll('{}', '')
 
-console.log(result)
+	return !Boolean(result)
+}
+
+console.log(checkPairs('(){}[]{]'))
+console.log(checkPairs('][)({}'))
+console.log(checkPairs('}}(){{'))
+console.log(checkPairs('(){}[]()[]{}[]()'))
+console.log(checkPairs('()()'))
