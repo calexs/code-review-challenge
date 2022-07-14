@@ -1,5 +1,5 @@
 const string = "()";
-
+['(',')']
 const aString = Array.from(string);
 
 
