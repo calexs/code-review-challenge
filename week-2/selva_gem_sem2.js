@@ -1,7 +1,8 @@
 const testCases = [
     "III",
     "LVIII",
-    "MCMXCIV"
+    "MCMXCIV",
+    "IXMM"
 ]
 
 const singles = {
@@ -33,6 +34,17 @@ const challenge = (input) => {
     const chars = Array.from(input)
     let resultNumber = 0
 
+    let lastValue;
+
+    const updateTotal = (value) => {
+        if(value === "Invalid" || lastValue < value) {
+            resultNumber = "Invalid"
+        } else {
+            resultNumber += value
+            lastValue = value
+        }
+    }
+
 
     for (let i = 0; i < chars.length; i += 1){
         const char = chars[i]
@@ -44,8 +56,9 @@ const challenge = (input) => {
             const doubleValue = doublesMap[nextChar]
 
             if (doubleValue) {
-                resultNumber += doubleValue
                 i += 1
+
+                updateTotal(doubleValue)
 
                 continue
             }
@@ -53,7 +66,7 @@ const challenge = (input) => {
 
         const value = singles[char]
 
-        resultNumber += value
+        updateTotal(value)
 
     }
 
