@@ -24,8 +24,8 @@ const convertAlgsToNumber = (input) => {
     const algOne = algsToNumbers[inputArr[i-1]];
     const algTwo = algsToNumbers[inputArr[i]];
 
-    if (!algTwo) {
-      total += algOne;
+    if (!algOne) {
+      total += algTwo;
     } else {
       if(algTwo > algOne) {
         total += algTwo - algOne;
@@ -38,4 +38,4 @@ const convertAlgsToNumber = (input) => {
   return total;
 }
 
-console.log(convertAlgsToNumber('XIX'));
+console.log(convertAlgsToNumber('XII'));
