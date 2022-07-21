@@ -1,22 +1,22 @@
 # Mais prox Soma de 3
 
-Given an integer array `nums` of length `n` and an integer `target`, find three integers in nums such that the sum is closest to target.
+Dado um array de inteiros `nums` de comprimento `n` e um `target` inteiro, encontre três inteiros em `nums` de modo que a soma seja a mais próxima do `target`.
 
-Return the sum of the three integers.
+Retorna a soma `sum` dos três inteiros.
 
-You may assume that each input would have exactly one solution.
+Você pode supor que cada entrada teria exatamente uma solução.
 
-**Example 1**:
-
-```
-Input: nums = [-1,2,1,-4], target = 1
-Output: 2
-Explanation: The sum that is closest to the target is 2. (-1 + 2 + 1 = 2).
-```
-
-**Example 2**:
+**Exemplo 1**:
 
 ```
-Input: nums = [0,0,0], target = 1
-Output: 0
+Entrada: nums = [-1,2,1,-4], target = 1
+Saída: 2
+Explicação: A some resultante mais proxíma do alvo é 2. (-1 + 2 + 1 = 2).
+```
+
+**Exemplo 2**:
+
+```
+Entrada: nums = [0,0,0], target = 1
+Saída: 0
 ```
