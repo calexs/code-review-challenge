@@ -1,4 +1,4 @@
-const s = "()[]{}"
+const s = "[[[]{}"
 
 const validateString = () => {
   let openKey = "";
