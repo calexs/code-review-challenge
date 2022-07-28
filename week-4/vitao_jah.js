@@ -1,14 +1,23 @@
-const s = "cat",
-    t = "tac";
+const s = "ana",
+    t = "naa";
 
 const validAnagram = (s, t) => {
     if (s.length !== t.length) {
         return false;
     }
 
-    for (let i in s) {
-        if (!s.includes(t[i])) return false;
-        else return true;
+    const arrS = [];
+    const arrT = [];
+
+    arrS.push(s.split("").sort().join(""));
+    arrT.push(t.split("").sort().join(""));
+
+    for (let i = 0; i < s.length; i++) {
+        if (arrS[i] === arrT[i]) {
+            return true;
+        } else {
+            return false;
+        }
     }
 };
 
