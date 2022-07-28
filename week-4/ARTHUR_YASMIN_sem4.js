@@ -14,6 +14,10 @@ const inputs = [
   {
     s: 'topo',
     t: 'copo'
+  },
+  {
+    s: 'topod',
+    t: 'copo'
   }
 ]
 
@@ -27,7 +31,7 @@ const isValidAnagram = (input) => {
 
   if(sParts.length !== tParts.length) {
     console.warn('The length is not the same')
-    return
+    return;
   }
 
   for(let currentIndex = 0; currentIndex < sParts.length; currentIndex++) {
@@ -49,6 +53,13 @@ const isValidAnagram = (input) => {
 
 inputs.forEach(input => {
   const { s, t } = input
+
+  const isValid = isValidAnagram(input)
+
+  if(typeof isValid === 'undefined') {
+    return
+  }
+
   console.log(`Entrada: s = ${s}, t = ${t}`)
-  console.log(`Saída: ${ isValidAnagram(input)}`)
+  console.log(`Saída: ${isValid}`)
 })
