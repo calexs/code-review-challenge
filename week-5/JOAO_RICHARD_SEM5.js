@@ -20,11 +20,9 @@ function increment(aNum) {
   });
 
   const regexClearNoNumbers = /,/g;
-  const parseInt = Number(
-    separateDigits.toString().replace(regexClearNoNumbers, "")
-  );
+  const parseInt = separateDigits.toString().replace(regexClearNoNumbers, "");
 
-  return parseInt;
+  return parseInt.split("");
 }
 
 console.log(increment([1, 2, 3]));
