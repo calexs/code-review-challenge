@@ -3,23 +3,26 @@ Incrementando em um, 123 + 1 = 124.
 Portanto, o resultado deveria ser [1,2,4]. */
 
 function increment(aNum) {
-  const incrementLastNumber = aNum.map((x, i, a) => {
-    if (i === a.length - 1) {
-      return x + 1;
+  const incrementLastNumber = aNum.map((number, index, array) => {
+    if (index === array.length - 1) {
+      return number + 1;
     }
-    return x;
+    return number;
   });
 
-  const separateDigits = incrementLastNumber.map((x, i, a) => {
-    if (x > 9) {
-      const splitter = String(x).split("");
+  const separateDigits = incrementLastNumber.map((num) => {
+    if (num > 9) {
+      const splitter = String(num).split("");
 
       return splitter;
     }
-    return x;
+    return num;
   });
 
-  const parseInt = Number(separateDigits.toString().replace(/,/g, ""));
+  const regexClearNoNumbers = /,/g;
+  const parseInt = Number(
+    separateDigits.toString().replace(regexClearNoNumbers, "")
+  );
 
   return parseInt;
 }
